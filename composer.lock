@@ -58,6 +58,7 @@
         },
         {
             "name": "bower-asset/jquery",
+<<<<<<< HEAD
             "version": "2.2.3",
             "source": {
                 "type": "git",
@@ -68,6 +69,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/jquery/jquery-dist/zipball/af22a351b2ea5801ffb1695abb3bb34d5bed9198",
                 "reference": "af22a351b2ea5801ffb1695abb3bb34d5bed9198",
+=======
+            "version": "2.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jquery/jquery-dist.git",
+                "reference": "c0185ab7c75aab88762c5aae780b9d83b80eda72"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jquery/jquery-dist/zipball/c0185ab7c75aab88762c5aae780b9d83b80eda72",
+                "reference": "c0185ab7c75aab88762c5aae780b9d83b80eda72",
+>>>>>>> 121c40f7508f281c7ce7a18120c5d7ce428a21d9
                 "shasum": ""
             },
             "type": "bower-asset-library",
@@ -301,6 +314,7 @@
         },
         {
             "name": "swiftmailer/swiftmailer",
+<<<<<<< HEAD
             "version": "v5.4.1",
             "source": {
                 "type": "git",
@@ -311,6 +325,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/0697e6aa65c83edf97bb0f23d8763f94e3f11421",
                 "reference": "0697e6aa65c83edf97bb0f23d8763f94e3f11421",
+=======
+            "version": "v5.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/swiftmailer/swiftmailer.git",
+                "reference": "d8db871a54619458a805229a057ea2af33c753e8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/d8db871a54619458a805229a057ea2af33c753e8",
+                "reference": "d8db871a54619458a805229a057ea2af33c753e8",
+>>>>>>> 121c40f7508f281c7ce7a18120c5d7ce428a21d9
                 "shasum": ""
             },
             "require": {
@@ -350,7 +376,11 @@
                 "mail",
                 "mailer"
             ],
+<<<<<<< HEAD
             "time": "2015-06-06 14:19:39"
+=======
+            "time": "2016-05-01 08:45:47"
+>>>>>>> 121c40f7508f281c7ce7a18120c5d7ce428a21d9
         },
         {
             "name": "yiisoft/yii2",
@@ -624,6 +654,7 @@
         },
         {
             "name": "fzaninotto/faker",
+<<<<<<< HEAD
             "version": "v1.5.0",
             "source": {
                 "type": "git",
@@ -651,6 +682,31 @@
                 "branch-alias": {
                     "dev-master": "1.5.x-dev"
                 }
+=======
+            "version": "v1.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fzaninotto/Faker.git",
+                "reference": "44f9a286a04b80c76a4e5fb7aad8bb539b920123"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/44f9a286a04b80c76a4e5fb7aad8bb539b920123",
+                "reference": "44f9a286a04b80c76a4e5fb7aad8bb539b920123",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3.3|^7.0"
+            },
+            "require-dev": {
+                "ext-intl": "*",
+                "phpunit/phpunit": "~4.0",
+                "squizlabs/php_codesniffer": "~1.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": []
+>>>>>>> 121c40f7508f281c7ce7a18120c5d7ce428a21d9
             },
             "autoload": {
                 "psr-4": {
@@ -672,7 +728,11 @@
                 "faker",
                 "fixtures"
             ],
+<<<<<<< HEAD
             "time": "2015-05-29 06:29:14"
+=======
+            "time": "2016-04-29 12:21:54"
+>>>>>>> 121c40f7508f281c7ce7a18120c5d7ce428a21d9
         },
         {
             "name": "phpspec/php-diff",
