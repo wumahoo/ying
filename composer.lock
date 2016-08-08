@@ -732,6 +732,7 @@
             "time": "2016-02-06 00:49:24"
         },
         {
+<<<<<<< HEAD
             "name": "yiisoft/yii2-redis",
             "version": "2.0.5",
             "source": {
@@ -747,16 +748,42 @@
             },
             "require": {
                 "yiisoft/yii2": ">=2.0.4"
+=======
+            "name": "yiisoft/yii2-mongodb",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiisoft/yii2-mongodb.git",
+                "reference": "e36eac274ea445f065cdfa618dac4bd9e067999a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yiisoft/yii2-mongodb/zipball/e36eac274ea445f065cdfa618dac4bd9e067999a",
+                "reference": "e36eac274ea445f065cdfa618dac4bd9e067999a",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mongodb": ">=1.0.0",
+                "yiisoft/yii2": ">=2.0.5"
+>>>>>>> refs/remotes/ying/master
             },
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
+<<<<<<< HEAD
                     "dev-master": "2.0.x-dev"
+=======
+                    "dev-master": "2.1.x-dev"
+>>>>>>> refs/remotes/ying/master
                 }
             },
             "autoload": {
                 "psr-4": {
+<<<<<<< HEAD
                     "yii\\redis\\": ""
+=======
+                    "yii\\mongodb\\": ""
+>>>>>>> refs/remotes/ying/master
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -765,6 +792,7 @@
             ],
             "authors": [
                 {
+<<<<<<< HEAD
                     "name": "Carsten Brandt",
                     "email": "mail@cebe.cc"
                 }
@@ -778,6 +806,20 @@
                 "yii2"
             ],
             "time": "2016-03-17 04:11:03"
+=======
+                    "name": "Paul Klimov",
+                    "email": "klimov.paul@gmail.com"
+                }
+            ],
+            "description": "MongoDb extension for the Yii framework",
+            "keywords": [
+                "active-record",
+                "mongo",
+                "mongodb",
+                "yii2"
+            ],
+            "time": "2016-06-27 00:53:26"
+>>>>>>> refs/remotes/ying/master
         },
         {
             "name": "yiisoft/yii2-swiftmailer",
@@ -1139,6 +1181,54 @@
                 "yii2"
             ],
             "time": "2016-03-18 14:09:46"
+        },
+        {
+            "name": "yiisoft/yii2-redis",
+            "version": "2.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiisoft/yii2-redis.git",
+                "reference": "7fd93ff3847e765964c8c83b7e3eed0281078916"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yiisoft/yii2-redis/zipball/7fd93ff3847e765964c8c83b7e3eed0281078916",
+                "reference": "7fd93ff3847e765964c8c83b7e3eed0281078916",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": ">=2.0.4"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "yii\\redis\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Carsten Brandt",
+                    "email": "mail@cebe.cc"
+                }
+            ],
+            "description": "Redis Cache, Session and ActiveRecord for the Yii framework",
+            "keywords": [
+                "active-record",
+                "cache",
+                "redis",
+                "session",
+                "yii2"
+            ],
+            "time": "2016-03-17 04:11:03"
         }
     ],
     "aliases": [],
