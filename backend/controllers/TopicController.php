@@ -11,6 +11,6 @@ namespace backend\controllers;
 use Yii;
 use yii\web\controller;
 
-class ArticleController extends Controller{
+class TopicController extends Controller{
 
 }
