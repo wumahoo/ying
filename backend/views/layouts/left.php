@@ -30,13 +30,30 @@
             [
                 'options' => ['class' => 'sidebar-menu'],
                 'items' => [
-                    ['label' => 'Menu Yii2', 'options' => ['class' => 'header']],
-                    ['label' => 'Gii', 'icon' => 'fa fa-file-code-o', 'url' => ['/gii']],
-                    ['label' => 'Debug', 'icon' => 'fa fa-dashboard', 'url' => ['/debug']],
+                    ['label' => 'Menu', 'options' => ['class' => 'header']],
+                    ['label' => 'Home', 'icon' => 'glyphicon glyphicon-home', 'url' => ['/site']],
+                    [
+                        'label' => 'User','icon' => 'glyphicon glyphicon-user', 'url' =>['/user'], 'items'=>[
+                            ['label' => 'New Users','url'=>['/user']],
+                            ['label' => 'two1','url'=>'#'],
+                            ['label' => 'two2','url'=>'#'],
+                            ['label' => 'two3','url'=>'#']
+                        ]
+                    ],
+                    [
+                        'label' => 'Maker','icon' => 'glyphicon glyphicon-bishop', 'url'=>'#','items'=>[
+                            ['label' => 'two','url'=>'#'],
+                            ['label' => 'two1','url'=>'#'],
+                            ['label' => 'two2','url'=>'#'],
+                            ['label' => 'two3','url'=>'#']
+                        ]
+                    ],
+                    ['label' => 'Topic', 'icon'=>'glyphicon glyphicon-tasks', 'url' => ['/topic']],
+                    ['label' => 'Article', 'icon' => 'glyphicon glyphicon-font', 'url' => ['/article']],
                     ['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],
                     [
-                        'label' => 'Same tools',
-                        'icon' => 'fa fa-share',
+                        'label' => 'Settings',
+                        'icon' => 'glyphicon glyphicon-cog',
                         'url' => '#',
                         'items' => [
                             ['label' => 'Gii', 'icon' => 'fa fa-file-code-o', 'url' => ['/gii'],],
@@ -60,6 +77,7 @@
                             ],
                         ],
                     ],
+
                 ],
             ]
         ) ?>

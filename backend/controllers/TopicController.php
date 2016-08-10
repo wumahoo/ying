@@ -13,4 +13,7 @@ use yii\web\controller;
 
 class TopicController extends Controller{
 
+    public function actionIndex(){
+        return $this->render('index',['message'=>'this is topic']);
+    }
 }
