@@ -8,13 +8,19 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
-
-var_dump($model);
+use yii\helpers\Url;
 
 
 $inserTopicForm = ActiveForm::begin([
     'id' => 'login-form',
-    'options' => ['class' => 'form-horizontal'],
+    'options' => [
+        'class' => 'form-horizontal',
+    ],
+    'action' => Url::to(['topic/inserttopic']),
+
+    //Ajax submit form
+    'enableAjaxValidation' => true,
+    'validationUrl' => Url::to(['topic/validate']),
 ]) ?>
 
 <?= $inserTopicForm->field($model, 'username') ?>
@@ -22,7 +28,7 @@ $inserTopicForm = ActiveForm::begin([
 
 <div class="form-group">
     <div class="col-lg-offset-1 col-lg-11">
-        <?= Html::submitButton('topic', ['class' => 'btn btn-primary']) ?>
+        <?= Html::submitButton('Submit', ['class' => 'btn btn-primary']) ?>
     </div>
 </div>
 <?php ActiveForm::end() ?>
