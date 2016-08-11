@@ -10,8 +10,8 @@
 namespace backend\controllers;
 
 use Yii;
-use yii\web\controller;
-use app\models\topic;
+use yii\web\Controller;
+use app\models\Topic;
 use yii\widgets\ActiveForm;
 use yii\web\Response;
 //use yii\filters\AccessControl;
@@ -81,6 +81,4 @@ class TopicController extends Controller{
 
         return json_encode($array);
     }
-
-
 }
