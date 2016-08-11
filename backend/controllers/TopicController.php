@@ -12,9 +12,11 @@ namespace backend\controllers;
 use Yii;
 use yii\web\Controller;
 use app\models\Topic;
+use yii\web\UploadedFile;
 use yii\widgets\ActiveForm;
 use yii\web\Response;
 //use yii\filters\AccessControl;
+use app\models\UploadForm;
 
 class TopicController extends Controller{
 
@@ -80,5 +82,20 @@ class TopicController extends Controller{
         ];
 
         return json_encode($array);
+    }
+
+    public function actionUpload()
+    {
+        $model = new UploadForm();
+
+        if (Yii::$app->request->isPost) {
+            $model->imageFile = UploadedFile::getInstance($model, 'imageFile');
+            if ($model->upload()) {
+                // 文件上传成功
+                return;
+            }
+        }
+
+        return $this->render('upload', ['model' => $model]);
     }
 }
