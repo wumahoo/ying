@@ -23,7 +23,19 @@ $inserTopicForm = ActiveForm::begin([
     'validationUrl' => Url::to(['topic/validate']),
 ]) ?>
 
-<?= $inserTopicForm->field($model, 'username') ?>
+<!--更新信息，label,input_time,content-->
+<?= $inserTopicForm->field($model, 'content',[
+    //'inputOptions' => ['class' => '']
+])->textarea(['row' => 3,'maxlength'=>'100',])->label(false) ?>
+
+<?= $inserTopicForm->field($model,'label',['inputOptions' => [
+    'maxlength' => '50']
+])->input('text')->label('标签') ?>
+
+<div class="form-group">
+    <label for="exampleInputFile">File input</label>
+    <?= $inserTopicForm -> field($model,'image_url') ->fileInput()->label('图片') ?>
+</div>
 
 
 <div class="form-group">

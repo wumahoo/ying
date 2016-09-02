@@ -70,6 +70,8 @@ class TopicController extends Controller{
             Yii::$app->response->format = Response::FORMAT_JSON;
 
             //insert into topic table
+            $topic -> username = 'wumahoo';
+            $topic -> input_time = time();
             $topic->save();
         }
 

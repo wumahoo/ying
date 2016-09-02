@@ -40,13 +40,12 @@ class Topic extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['username', 'label', 'image_url', 'image_id', 'video_url', 'video_id', 'input_time', 'update_time', 'content'], 'required'],
+            ['content', 'required','message'=>'话题内容不能为空'],
             [['like_id', 'comment_id', 'image_id', 'video_id', 'input_time', 'update_time', 'view_count', 'status'], 'integer'],
             [['content'], 'string'],
-            [['username'], 'string', 'max' => 20],
-            [['label'], 'string', 'max' => 50],
+            [['username'], 'string', 'max' => 20,'message' => '用户名不能超过20字符'],
+            [['label'], 'string', 'max' => 50,'message' => '标签不能超过50个字符'],
             [['image_url', 'video_url'], 'string', 'max' => 100],
-            [['username'], 'unique'],
         ];
     }
 
@@ -57,19 +56,19 @@ class Topic extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'username' => 'Username',
+            'username' => '用户名',
             'like_id' => 'Like ID',
             'comment_id' => 'Comment ID',
-            'label' => 'Label',
+            'label' => '标签',
             'image_url' => 'Image Url',
             'image_id' => 'Image ID',
             'video_url' => 'Video Url',
             'video_id' => 'Video ID',
-            'input_time' => 'Input Time',
-            'update_time' => 'Update Time',
-            'content' => 'Content',
-            'view_count' => 'View Count',
-            'status' => 'Status',
+            'input_time' => '发表时间',
+            'update_time' => '更新时间',
+            'content' => '话题内容',
+            'view_count' => '阅读次数',
+            'status' => '话题状态',
         ];
     }
 }
