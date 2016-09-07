@@ -39,4 +39,5 @@ return [
         */
     ],
     'params' => $params,
+    //'catchAll' => ['site/offline'],
 ];

@@ -17,3 +17,15 @@ use yii\widgets\ActiveForm;
     <button>Submit</button>
 
 <?php ActiveForm::end() ?>
+
+<?php
+
+$headers = Yii::$app -> request -> headers;
+
+if($headers->has('User-Agent')){
+    echo 'ok';
+}else{
+    echo 'no';
+}
+
+?>

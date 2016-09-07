@@ -40,6 +40,9 @@ class TopicController extends Controller{
         ];
     }*/
 
+    /**
+     * @return string
+     */
     public function actionIndex(){
 
         $topic = new Topic();
@@ -94,6 +97,7 @@ class TopicController extends Controller{
             $model->imageFile = UploadedFile::getInstance($model, 'imageFile');
             if ($model->upload()) {
                 // 文件上传成功
+                echo 'upload successfull';
                 return;
             }
         }
