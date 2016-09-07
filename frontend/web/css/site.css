@@ -1,5 +1,6 @@
 html,
 body {
+    font-family: "Microsoft YaHei UI";
     height: 100%;
 }
 
@@ -100,12 +101,60 @@ a.desc:after {
     padding: 8px;
 }
 
-@media(max-width:768px) {
-	.nav li > form {
-	    padding: 3px;
-	}
+@media (max-width: 768px) {
+    .nav li > form {
+        padding: 3px;
+    }
 }
 
 .nav > li > form > button:hover {
     text-decoration: none;
 }
+
+/*导航的样式*/
+#w0 {
+    background-color: #f94972;
+
+}
+
+#w0 > .container > .navbar-header > a {
+    border-bottom: none;
+    border-color: red;
+    color: rgba(255, 255, 255, .9);
+}
+
+#w1 > li > a, #w1 > li > form > button {
+
+    color: rgba(255, 255, 255, .9);
+}
+
+#w1 > li.active > a {
+    background-color: #ec2424;
+    font-weight: bold;
+    color: #fff;
+}
+
+.navbar-toggle {
+    margin: auto;
+    padding: 18px;
+    border: none;
+    background-color: red;
+}
+
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+    border-bottom: none;
+    background-color: red;
+}
+
+.navber {
+    border-bottom: none;
+}
+
+.navbar-inverse {
+    border-color: red;
+}
+
+ul>li{
+    list-style: none;
+}
+

@@ -1,7 +1,9 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: Administrator
+ * User: wumahoo
  * Date: 2016/9/2 0002
  * Time: 下午 4:40
  */
+
+$this->title='社区小店';

@@ -8,13 +8,12 @@
 
 namespace backend\controllers;
 
-use Yii;
 use yii\web\Controller;
 
-class UserController extends Controller{
+class UserController extends Controller {
 
-    public function actionIndex(){
+	public function actionIndex() {
 
-        return $this->render('index');
-    }
+		return $this->render('index');
+	}
 }
