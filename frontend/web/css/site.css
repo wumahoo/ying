@@ -154,4 +154,7 @@ a.desc:after {
     border-color: red;
 }
 
+ul>li{
+    list-style: none;
+}
 

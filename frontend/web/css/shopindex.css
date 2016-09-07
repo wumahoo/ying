@@ -1,0 +1,30 @@
+img {
+    width: 100%;
+    vertical-align: top;
+}
+
+/*Ying活动*/
+.index-entry {
+
+    background: #f5f5f5;
+}
+.flexbox {
+    box-sizing: border-box;
+}
+.index-entry a {
+    display: block;
+    background: #fff;
+}
+
+.top-title{
+
+}
+
+/*专题*/
+#nav-swiper-container{
+    height:200px;
+    overflow: hidden;
+}
+.swiper-wrapper{
+    height:200px;
+}
