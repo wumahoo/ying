@@ -2,7 +2,7 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'Ying 小区电商';
+$this->title = 'Ying shop';
 
 $this->registerCssFile('@web/css/shopindex.css',['depends'=>['backend\assets\AppAsset']]);
 
