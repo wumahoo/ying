@@ -3,10 +3,11 @@
 /* @var $this yii\web\View */
 
 //setting title
-$this->title = 'Ying 小区电商';
+$this->title = '厨娘社区';
 //load css,js
 $this->registerCssFile('@web/css/shopindex.css', ['depends' => ['backend\assets\AppAsset']]);
 $this->registerJsFile('@web/js/site.js', ['depends' => ['backend\assets\AppAsset']]);
+
 ?>
 <div class="site-index">
 
@@ -48,7 +49,7 @@ $this->registerJsFile('@web/js/site.js', ['depends' => ['backend\assets\AppAsset
             </div>
         </div>
     </div>
-    <!--  图片轮播  -->
+    <!--  end图片轮播  -->
 
     <div class="body-content">
 
@@ -68,68 +69,58 @@ $this->registerJsFile('@web/js/site.js', ['depends' => ['backend\assets\AppAsset
                 </div>
             </div>
 
-            <!--水平滚动-->
 
             <!-- 左导航内容 -->
-            <div class="col-lg-2">
+            <div class="col-lg-2 col-md-3">
                 <h2>右侧栏的导航</h2>
 
                 <p>这个左边导航的内容</p>
             </div>
 
             <!--正文内容-->
-            <div class="col-lg-8">
+            <div class="col-md-6 col-lg-8">
                 <article class="art">
-
-                    <section class="sec sec-1 flexbox align-center">
-                        <div class="d d-1">
+                    <?php var_dump($data); ?>
+                    <!--用户头像-->
+                    <section class="user-head">
+                        <div class="user-img float-box-left">
                             <a href="http://www.meilapp.com/user/8f113693/">
-                                <img alt="avatar" class="profile"
+                                <img alt="avatar" class="img-circle"
                                      src="http://meilapp.qiniucdn.com/FqqGxbkIRVPBuS5QLBPr75Apa-Ek?imageMogr2/thumbnail/80x/format/webp">
                             </a>
                         </div>
-                        <div class="d d-2">
+                        <div class="user-name float-box-left">
                             <a href="http://www.meilapp.com/user/8f113693/">
-                                <span>悠悠香</span>
-                                <i class="icon-l">8</i>
+                                <span>wumahoo</span>
                             </a>
                         </div>
                     </section>
 
-
-                    <section class="sec sec-2">
+                    <section class="art-image">
                         <div class="banner">
                             <a href="http://www.meilapp.com/topic/63aad78e/">
                                 <img alt="" src="http://meilapp.qiniucdn.com/FtKM2yrtG4rVG2LTJtSyqlE8BuLD?imageMogr2/thumbnail/!750x600r/gravity/Center/crop/750x600/format/webp">
                             </a>
                         </div>
-                        <p class="text">【最心水】两款便宜好用化妆水
+                        <p class="art-text">【最心水】两款便宜好用化妆水
                             + 掐的出水的好皮肤💆~
                             美啦最近活动好多 积极参加~ 么么哒[e]1f338[/e]
                             说到水 护肤水 我就强力推荐下面这两款咯！
                         </p>
+                    </section>
 
-                        <div class="keyword">
-                            <i class="icon"></i>
-                            <a href="http://www.meilapp.com/tagfilter/3439/">
-                                <span>化妆水</span>
-                            </a>
-                            <a
-                                href="http://www.meilapp.com/tagfilter/10024/">
-                                <span>海淘</span>
-                            </a>
+                    <section class="art-footer">
+                        <div class="keyword art-footer-left-bar">
+                            <span class="glyphicon glyphicon-tag"></span>
+                            <span class="labels">标签1</span>
+                            <span class="labels">标签2</span>
+                            <span class="labels">标签3</span>
                         </div>
 
-                    </section>
-                    <section class="sec sec-3 ware">
-                        <div class="ware-hd flexbox align-center pack-justify">
-                            <div class="d d-1"></div>
-                            <div class="d d-2">
-                                <a href="http://www.meilapp.com/topic/63aad78e/" style="color:inherit;">
-                                    <div class="comment"><i class="icon icon-comment"></i><span>34</span></div>
-                                </a>
-                                <div class="likes"><i class="icon icon-likes"></i><span>75</span></div>
-                            </div>
+                        <div class="art-footer-right-bar">
+                            <span>热度</span>
+                            <span>评论</span>
+                            <span class="glyphicon glyphicon-heart like"></span>
                         </div>
                     </section>
 
@@ -137,10 +128,11 @@ $this->registerJsFile('@web/js/site.js', ['depends' => ['backend\assets\AppAsset
             </div>
 
             <!--右导航内容-->
-            <div class="col-lg-2">
+            <div class="col-md-3 col-lg-2">
                 <h2>右侧栏内容</h2>
 
                 <p>右侧栏的内容右侧栏的内容右侧栏的内容右侧栏的内容右侧栏的内容右侧栏的内容</p>
+
 
             </div>
         </div>

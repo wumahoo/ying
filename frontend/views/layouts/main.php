@@ -28,21 +28,21 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => 'Ying',
+        'brandLabel' => Yii::t('common','Ying'),
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
     $menuItems = [
-        ['label' => '主页', 'url' => ['/site/index']],
-        ['label' => '菜谱', 'url' => ['/cooking/index']],
-        ['label' => '社区', 'url' => ['/shop/index']],
-        ['label' => '我的', 'url' => ['/personal/index']],
+        ['label' => Yii::t('common','Home'), 'url' => ['/site/index']],
+        ['label' => Yii::t('common','Cooking'), 'url' => ['/cooking/index']],
+        ['label' => Yii::t('common','Shop'), 'url' => ['/shop/index']],
+        ['label' => Yii::t('common','Community'), 'url' => ['/personal/index']],
     ];
     if (Yii::$app->user->isGuest) {
-        $menuItems[] = ['label' => '注册', 'url' => ['/site/signup']];
-        $menuItems[] = ['label' => '登陆', 'url' => ['/site/login']];
+        $menuItems[] = ['label' => Yii::t('common','SignUp'), 'url' => ['/pass-port/signup']];
+        $menuItems[] = ['label' => Yii::t('common','Login'), 'url' => ['/pass-port/login']];
     } else {
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')

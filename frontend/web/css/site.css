@@ -120,7 +120,7 @@ a.desc:after {
 #w0 > .container > .navbar-header > a {
     border-bottom: none;
     border-color: red;
-    color: rgba(255, 255, 255, .9);
+    color: (255, 255, 255, .9);
 }
 
 #w1 > li > a, #w1 > li > form > button {
