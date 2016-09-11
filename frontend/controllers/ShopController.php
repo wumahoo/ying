@@ -8,12 +8,19 @@
 
 namespace frontend\controllers;
 
-use yii;
 use yii\web\Controller;
 
+/**
+ * Class ShopController
+ * @package frontend\controllers
+ */
 class ShopController extends Controller
 {
 
+    /**
+     * shop Home
+     * @return string
+     */
     public function actionIndex()
     {
 
