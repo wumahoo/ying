@@ -16,10 +16,11 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $art = new Article();
-        $a = $art->listLastArticle(10);
+        $article = new Article();
+        $artList = $article->listLastArticle(10);
 
-        return $this->render('index', ['data' => $a]);
+
+        return $this->render('index', ['articleData' => $artList]);
     }
 
 

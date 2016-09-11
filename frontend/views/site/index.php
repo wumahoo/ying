@@ -80,49 +80,54 @@ $this->registerJsFile('@web/js/site.js', ['depends' => ['backend\assets\AppAsset
             <!--正文内容-->
             <div class="col-md-6 col-lg-8">
                 <article class="art">
-                    <?php var_dump($data); ?>
                     <!--用户头像-->
-                    <section class="user-head">
-                        <div class="user-img float-box-left">
-                            <a href="http://www.meilapp.com/user/8f113693/">
-                                <img alt="avatar" class="img-circle"
-                                     src="http://meilapp.qiniucdn.com/FqqGxbkIRVPBuS5QLBPr75Apa-Ek?imageMogr2/thumbnail/80x/format/webp">
-                            </a>
-                        </div>
-                        <div class="user-name float-box-left">
-                            <a href="http://www.meilapp.com/user/8f113693/">
-                                <span>wumahoo</span>
-                            </a>
-                        </div>
-                    </section>
+                    <?php foreach ($articleData as $key => $articleContent): ?>
+                        <section class="user-head">
+                            <div class="user-img float-box-left">
+                                <a href="<?= $articleContent['url'] ?>">
+                                    <img src="#"/>
+                                </a>
+                            </div>
+                            <div class="user-name float-box-left">
+                                <a href="#">
+                                    <span><?= $articleContent['username'] ?></span>
+                                </a>
+                            </div>
+                        </section>
 
-                    <section class="art-image">
-                        <div class="banner">
-                            <a href="http://www.meilapp.com/topic/63aad78e/">
-                                <img alt="" src="http://meilapp.qiniucdn.com/FtKM2yrtG4rVG2LTJtSyqlE8BuLD?imageMogr2/thumbnail/!750x600r/gravity/Center/crop/750x600/format/webp">
-                            </a>
-                        </div>
-                        <p class="art-text">【最心水】两款便宜好用化妆水
-                            + 掐的出水的好皮肤💆~
-                            美啦最近活动好多 积极参加~ 么么哒[e]1f338[/e]
-                            说到水 护肤水 我就强力推荐下面这两款咯！
-                        </p>
-                    </section>
+                        <section class="art-image">
+                            <div class="banner">
+                                <a href="http://www.meilapp.com/topic/63aad78e/">
+                                    <?php if ($articleContent['multimedia_type'] == 1): ?>
+                                        <img alt="" src="<?= $articleContent['multimedia_url'] ?>">
+                                    <?php endif; ?>
 
-                    <section class="art-footer">
-                        <div class="keyword art-footer-left-bar">
-                            <span class="glyphicon glyphicon-tag"></span>
-                            <span class="labels">标签1</span>
-                            <span class="labels">标签2</span>
-                            <span class="labels">标签3</span>
-                        </div>
+                                    <?php if ($articleContent['multimedia_type'] == 2): ?>
+                                        <video alt="" src="<?= $articleContent['multimedia_url'] ?>"> 你的浏览器不支持视频播放</video>
+                                    <?php endif; ?>
 
-                        <div class="art-footer-right-bar">
-                            <span>热度</span>
-                            <span>评论</span>
-                            <span class="glyphicon glyphicon-heart like"></span>
-                        </div>
-                    </section>
+                                </a>
+                            </div>
+                            <p class="art-text">
+                                <?= $articleContent['description'] ?>
+                            </p>
+                        </section>
+
+                        <section class="art-footer">
+                            <div class="keyword art-footer-left-bar">
+                                <span class="glyphicon glyphicon-tag"></span>
+                                <span class="labels">标签1</span>
+                                <span class="labels">标签2</span>
+                                <span class="labels">标签3</span>
+                            </div>
+
+                            <div class="art-footer-right-bar">
+                                <span>热度</span>
+                                <span>评论</span>
+                                <span class="glyphicon glyphicon-heart like"></span>
+                            </div>
+                        </section>
+                    <?php endforeach; ?>
 
                 </article>
             </div>

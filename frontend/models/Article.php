@@ -1,6 +1,7 @@
 <?php
 namespace frontend\models;
 
+use common\models\User;
 use Yii;
 
 /**
@@ -22,6 +23,7 @@ use Yii;
  * @property string $username
  * @property string $update_time
  * @property string $input_time
+ * @property string $multimedia_url
  */
 class Article extends \yii\db\ActiveRecord
 {
@@ -56,22 +58,23 @@ class Article extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id'          => 'ID',
-            'cate_id'     => 'Cate ID',
-            'type_id'     => 'Type ID',
-            'title'       => 'Title',
-            'style'       => 'Style',
-            'keywords'    => 'Keywords',
-            'labels'      => 'Labels',
-            'description' => 'Description',
-            'url'         => 'Url',
-            'list_order'  => 'List Order',
-            'status'      => 'Status',
-            'sysadd'      => 'Sysadd',
-            'is_link'     => 'Is Link',
-            'username'    => 'Username',
-            'update_time' => 'Update Time',
-            'input_time'  => 'Input Time',
+            'id'             => 'ID',
+            'cate_id'        => 'Cate ID',
+            'type_id'        => 'Type ID',
+            'title'          => 'Title',
+            'style'          => 'Style',
+            'keywords'       => 'Keywords',
+            'labels'         => 'Labels',
+            'description'    => 'Description',
+            'url'            => 'Url',
+            'list_order'     => 'List Order',
+            'status'         => 'Status',
+            'sysadd'         => 'Sysadd',
+            'is_link'        => 'Is Link',
+            'username'       => 'Username',
+            'update_time'    => 'Update Time',
+            'input_time'     => 'Input Time',
+            'multimedia_url' => 'Multimedia Url',
         ];
     }
 
