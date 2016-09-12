@@ -45,9 +45,9 @@ AppAsset::register($this);
         $menuItems[] = ['label' => Yii::t('common','Login'), 'url' => ['/pass-port/login']];
     } else {
         $menuItems[] = '<li>'
-            . Html::beginForm(['/site/logout'], 'post')
+            . Html::beginForm(['/pass-port/logout'], 'post')
             . Html::submitButton(
-                '退出 (' . Yii::$app->user->identity->username . ')',
+                Yii::t('common','Logout'),
                 ['class' => 'btn btn-link']
             )
             . Html::endForm()

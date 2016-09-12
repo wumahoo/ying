@@ -40,11 +40,32 @@ return [
                         'common' => 'common.php',
                     ],
                 ],
-                'power' => [
+                'personal' => [
                     'class' => 'yii\i18n\PhpMessageSource',
                     //'basePath' => '/messages',
                     'fileMap' => [
-                        'power' => 'power.php',
+                        'personal' => 'personal.php',
+                    ],
+                ],
+                'shop' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    //'basePath' => '/messages',
+                    'fileMap' => [
+                        'shop' => 'shop.php',
+                    ],
+                ],
+                'pass-port' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    //'basePath' => '/messages',
+                    'fileMap' => [
+                        'pass-port' => 'pass-port.php',
+                    ],
+                ],
+                'site' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    //'basePath' => '/messages',
+                    'fileMap' => [
+                        'site' => 'site.php',
                     ],
                 ],
             ],

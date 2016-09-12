@@ -6,4 +6,4 @@
  * Time: 下午 5:05
  */
 
-$this->title = '我的空间';
+$this->title = Yii::t('personal','My Space');

@@ -79,13 +79,14 @@ $this->registerJsFile('@web/js/site.js', ['depends' => ['backend\assets\AppAsset
 
             <!--正文内容-->
             <div class="col-md-6 col-lg-8">
-                <article class="art">
-                    <!--用户头像-->
-                    <?php foreach ($articleData as $key => $articleContent): ?>
+                <?php foreach ($articleData as $key => $articleContent): ?>
+                    <article class="art">
+                        <!--用户头像-->
                         <section class="user-head">
                             <div class="user-img float-box-left">
                                 <a href="<?= $articleContent['url'] ?>">
-                                    <img src="#"/>
+                                    <img class="userface-img"
+                                         src="http://meilapp.qiniucdn.com/FiJJgLcutUsozynmxMw5gF369SX0?imageMogr2/thumbnail/80x/format/webp"/>
                                 </a>
                             </div>
                             <div class="user-name float-box-left">
@@ -99,11 +100,12 @@ $this->registerJsFile('@web/js/site.js', ['depends' => ['backend\assets\AppAsset
                             <div class="banner">
                                 <a href="http://www.meilapp.com/topic/63aad78e/">
                                     <?php if ($articleContent['multimedia_type'] == 1): ?>
-                                        <img alt="" src="<?= $articleContent['multimedia_url'] ?>">
+                                        <img class="multimedia" alt="" src="<?= $articleContent['multimedia_url'] ?>">
                                     <?php endif; ?>
 
                                     <?php if ($articleContent['multimedia_type'] == 2): ?>
-                                        <video alt="" src="<?= $articleContent['multimedia_url'] ?>"> 你的浏览器不支持视频播放</video>
+                                        <video class="multimedia" alt="" src="<?= $articleContent['multimedia_url'] ?>"> 你的浏览器不支持视频播放
+                                        </video>
                                     <?php endif; ?>
 
                                 </a>
@@ -115,21 +117,24 @@ $this->registerJsFile('@web/js/site.js', ['depends' => ['backend\assets\AppAsset
 
                         <section class="art-footer">
                             <div class="keyword art-footer-left-bar">
-                                <span class="glyphicon glyphicon-tag"></span>
-                                <span class="labels">标签1</span>
-                                <span class="labels">标签2</span>
-                                <span class="labels">标签3</span>
+                                <?php if ($articleContent['labels']): ?>
+                                    <span class="glyphicon glyphicon-tag tips"></span>
+                                    <?php $labelString = explode(',', $articleContent['labels']); ?>
+                                    <?php foreach ($labelString as $labValue): ?>
+                                        <span class="labels"><?= $labValue ?></span>
+                                    <?php endforeach; ?>
+                                <?php endif; ?>
                             </div>
 
                             <div class="art-footer-right-bar">
                                 <span>热度</span>
                                 <span>评论</span>
-                                <span class="glyphicon glyphicon-heart like"></span>
+                                <span class="glyphicon glyphicon-heart likes"></span>
                             </div>
                         </section>
-                    <?php endforeach; ?>
 
-                </article>
+                    </article>
+                <?php endforeach; ?>
             </div>
 
             <!--右导航内容-->

@@ -6,4 +6,8 @@
  * Time: 下午 4:40
  */
 
-$this->title='社区小店';
+$this->title=Yii::t('shop','Community Shop');
+
+?>
+
+<h1>社区小店建设中...</h1>

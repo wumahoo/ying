@@ -2,6 +2,7 @@ html,
 body {
     font-family: "Microsoft YaHei UI";
     height: 100%;
+    background-color: #ededef;
 }
 
 .wrap {
