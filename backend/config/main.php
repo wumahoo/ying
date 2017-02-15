@@ -37,6 +37,11 @@ return [
             ],
         ],
         */
+
+        //load rbac Manager and use mysql to save message 
+        "authManager" => [        
+            "class" => 'yii\rbac\DbManager',
+        ],
     ],
     'params' => $params,
     //'catchAll' => ['site/offline'],

@@ -7,3 +7,6 @@
  */
 
 $this->title = Yii::t('personal','My Space');
+
+?>
+

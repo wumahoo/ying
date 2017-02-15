@@ -20,7 +20,9 @@
         "yiisoft/yii2-swiftmailer": "*",
         "dmstr/yii2-adminlte-asset": "^2.3",
         "yiisoft/yii2-redis": "^2.0",
-        "yiisoft/yii2-mongodb": "^2.1"
+        "yiisoft/yii2-mongodb": "^2.1",
+        "workerman/workerman": "^3.3",
+        "mdmsoft/yii2-admin": "^3.2"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",
@@ -39,5 +41,11 @@
     },
     "scripts": {
         "post-install-cmd": "php init --env=Development --overwrite=n"
+    },
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
+        }
     }
 }

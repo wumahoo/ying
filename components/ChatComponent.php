@@ -10,7 +10,7 @@ namespace app\components;
 
 use yii\base\Object;
 
-class TestComponent extends Object
+class ChatComponent extends Object
 {
     /**
      * @var
